@@ -1,0 +1,67 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="CookieClicker" Height="550" Width="415" >
+    <Grid Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "0.9*"/>
+            <RowDefinition Height = "0.5*"/>
+            <RowDefinition Height = "*"/>
+            </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2.5*"/>
+            </Grid.RowDefinitions>
+        <Label Content="0 Point" HorizontalAlignment="Center" FontSize="34" VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" x:Name="labelPoints"/>
+        <Button Grid.Row="1"  Content="Click" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="27" Margin="10,15,10,15" Background="#FFAB6161" x:Name="Click" Click="Click_Click" FontFamily="Toledo Heavy">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="50p Upgrades: 0" Grid.Row="1" Margin="0,0,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" x:Name="l50"/>
+            <Label Content="100p Upgrades: 0" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Grid.Column="1" x:Name="l100"/>
+            <Label Content="250p Upgrades: 0" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" x:Name="l250"/>
+            <Label Content="500p Upgrades: 0" Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Grid.Column="1" x:Name="l500"/>
+            <Label Content="1000p Upgrades: 0" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" x:Name="l1000"/>
+            <Label Content="1000000p Upgrades: 0" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Grid.Column="1" x:Name="l1000000"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Button Content="50p" FontSize="22" Margin="10,20,10,10" x:Name="otven" Click="otven_Click" />
+        <Button Content="100p" Grid.Column="1" FontSize="22" Margin="10,20,10,10" x:Name="szaz" Click="szaz_Click" />
+        <Button Content="250p" Grid.Row="1" FontSize="22" Margin="10,15,10,15" x:Name="ketszazotven" Click="ketszazotven_Click"/>
+        <Button Content="500p" Grid.Row="1" Grid.Column="1" FontSize="22" Margin="10,15,10,15" x:Name="otszaz" Click="otszaz_Click"/>
+        <Button Content="1000p" Grid.Row="2" FontSize="22" Margin="10,15,10,15" x:Name="ezer" Click="ezer_Click"/>
+        <Button Content="1000000p" Grid.Row="2" Grid.Column="1" FontSize="22" Margin="10,15,10,15" x:Name="millio" Click="millio_Click"/>
+        </Grid>
+        
+        <GroupBox Header="Upgrades" Grid.Row="2" BorderBrush="#FF2B8A0A" Foreground="#FF2B8A0A" />
+        <GroupBox Header="Active Upgrades" Grid.Row="1" BorderBrush="Red" Foreground="Red" />
+    </Grid>
+</Window>
